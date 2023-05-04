@@ -1,0 +1,127 @@
+@import '~ant-design-vue/es/style/themes/default.less';
+
+.text-overflow() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+// mixins for clearfix
+// ------------------------
+.clearfix() {
+  zoom: 1;
+  &::before,
+  &::after {
+    display: table;
+    content: ' ';
+  }
+  &::after {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+  }
+}
+
+.container {
+  /deep/ .ant-pro-page-header-wrap-page-header-warp {
+    .ant-breadcrumb {
+      display: none;
+    }
+  }
+  /deep/ .ant-page-header-content {
+    overflow: inherit;
+  }
+}
+
+.extra-content {
+  .clearfix();
+  float: right;
+  white-space: nowrap;
+  margin-top: -43px;
+  margin-right: 10px;
+
+  .stat-item {
+    position: relative;
+    display: inline-block;
+    padding: 0 32px;
+
+    > p:first-child {
+      margin-bottom: 4px;
+      color: @text-color-secondary;
+      font-size: @font-size-base;
+      line-height: 22px;
+    }
+
+    > p {
+      margin: 0;
+      color: @heading-color;
+      font-size: 30px;
+      line-height: 38px;
+
+      > span {
+        color: @text-color-secondary;
+        font-size: 20px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      width: 1px;
+      height: 40px;
+      background-color: @border-color-split;
+      content: '';
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+  /deep/ .ant-statistic-content-value {
+    .ant-statistic-content-value-decimal {
+      font-size: inherit;
+    }
+  }
+}
+
+.search-cont {
+  width: 276px;
+}
+
+.btn-group {
+  float: right;
+  button {
+    margin-right: 8px;
+  }
+}
+
+.form {
+  .ant-form-item {
+    margin: 0 40px 12px 0;
+    // &:first-child {
+    //   /deep/ .ant-form-item-label {
+    //     width: 70px;
+    //     text-align: left;
+    //   }
+    // }
+    .ant-form-item-children {
+      input,
+      .ant-calendar-picker,
+      .ant-select {
+        width: 220px;
+      }
+    }
+  }
+  /deep/ .ant-form-item {
+    .ant-cascader-input.ant-input{
+      width: 320px;
+    }
+  }
+}

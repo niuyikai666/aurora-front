@@ -1,0 +1,219 @@
+.container {
+  position: relative;
+  padding-top: 12%;
+  width: 100%;
+  height: 100%;
+  background-color: #F0F2F5;
+  overflow: hidden;
+}
+.search-content {
+  position: relative;
+  z-index: 2;
+  width: 760px;
+  margin: 0 auto;
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    .label {
+      width: 167px;
+      height: 70px;
+      line-height: 70px;
+      border-right: solid 1px #E9E9E9;
+      font-size: 14px;
+      color: #755DD7;
+      text-align: center;
+    }
+    .right-con {
+      flex: 1;
+      padding: 0 24px;
+      .icon {
+        float: left;
+        margin-top: 8px;
+        margin-right: 6px;
+        width: 16px;
+        height: 16px;
+        background: url('../../assets/index/icon_search.png');
+        background-size: 100% 100%;
+      }
+      .search-input {
+        width: 500px;
+        border: 0;
+        outline: none !important;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .result-con {
+    width: 100%;
+    border-radius: 2px;
+    background-color: #fff;
+    ul {
+      padding: 15px 0;
+      max-height: 380px;
+      overflow-y: scroll;
+      li {
+        display: flex;
+        padding: 15px 24px;
+        align-items: center;
+        .item {
+          flex: 1;
+          display: inline-block;
+          font-size: 12px;
+          &:nth-child(1) {
+            flex: 1;
+          }
+        }
+        .info {
+          display: flex;
+          align-items: center;
+          .imgbox {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            background-color: #eee;
+          }
+          .name {
+            font-size: 14px;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}
+.icon-con {
+  position: absolute;
+  &.icon-1 {
+    position: absolute;
+    left: 0;
+    top: 101px;
+    width: 58px;
+    height: 66px;
+    background: url('../../assets/index/icon1.png');
+    background-size: 100% 100%;
+  }
+  &.icon-2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 212px;
+    height: 291px;
+    background: url('../../assets/index/icon2.png');
+    background-size: 100% 100%;
+    animation: scaleAnimate 5s ease infinite;
+  }
+  &.icon-3 {
+    position: absolute;
+    right: 22px;
+    top: 541px;
+    width: 96px;
+    height: 96px;
+    background: url('../../assets/index/icon3.png');
+    background-size: 100% 100%;
+    animation: rotateAnimate 15s ease infinite;
+    transform-origin: left bottom;
+  }
+  &.icon-4 {
+    position: absolute;
+    left: 399px;
+    bottom: 72px;
+    width: 144px;
+    height: 144px;
+    background: url('../../assets/index/icon4.png');
+    background-size: 100% 100%;
+    animation: rollAnimate 10s ease infinite;
+  }
+  &.icon-5 {
+    position: absolute;
+    left: 0;
+    top: 407px;
+    width: 154px;
+    height: 110px;
+    background: url('../../assets/index/icon5_1.png');
+    background-size: 100% 100%;
+    animation: rotateYAnimate 3s ease infinite;
+    // transform-origin: left bottom;
+    
+  }
+  &.icon-6 {
+    position: absolute;
+    left: 27px;
+    top: 478px;
+    width: 154px;
+    height: 110px;
+    background: url('../../assets/index/icon5_2.png');
+    background-size: 100% 100%;
+    animation: rotateYAnimate 3s ease infinite;
+  }
+}
+
+// icon2 动画
+@keyframes scaleAnimate {
+  0%{
+    transform: scale(1);  /*开始为原始大小*/
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+// icon3 动画
+@keyframes rotateAnimate {
+  0%{
+    transform: rotate(0);  /*开始为原始大小*/
+  }
+  55%{
+    transform: rotate(-360deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+
+// icon4 动画
+@keyframes rollAnimate {
+  0%{
+    transform: rotate(0);
+    transform: translateX(0);
+  }
+  55%{
+    transform: rotate(-360deg);
+    transform: translateX(50px);
+  }
+  100%{
+    transform: rotate(0);
+    transform: translateX(0);
+  }
+}
+
+// icon5 动画
+@keyframes rotateYAnimate {
+  0%{
+    transform: rotateZ(0);
+    transform: rotateY(0);
+    transform: rotateX(0);
+  }
+  55%{
+    transform: rotateZ(-30deg);
+    transform: rotateY(-30deg);
+    transform: rotateX(-30deg);
+  }
+  100%{
+    transform: rotateZ(0);
+    transform: rotateY(0);
+    transform: rotateX(0);
+  }
+}

@@ -1,0 +1,210 @@
+@import '~ant-design-vue/es/style/themes/default.less';
+
+.artists-detail-content {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2f5;
+}
+.m-card {
+  /deep/ .ant-card-body {
+    padding: 16px;
+  }
+  .ant-page-header.has-breadcrumb {
+    padding: 0;
+  }
+
+  .statis-list {
+    /deep/ .ant-statistic-content {
+      font-size: 16px;
+    }
+    .ant-col {
+      margin-bottom: 12px;
+    }
+  }
+
+  /deep/ .ant-tabs .ant-tabs-large-bar .ant-tabs-tab {
+    font-size: 14px;
+  }
+
+  /deep/ .ant-card-head {
+    border-bottom: 0;
+  }
+
+  /deep/ .ant-card-head .ant-tabs-bar {
+    border-bottom: 0;
+  }
+}
+.statics {
+  padding-top: 18px;
+  .ant-col {
+    margin: 6px 0;
+  }
+}
+
+.dash-cont {
+  margin-top: 20px;
+}
+
+.exchange-static {
+  margin-top: 30px;
+}
+
+.m-card-right {
+  position: relative;
+  width: 100%;
+}
+
+.right-bar {
+  display: flex;
+  flex: 1;
+  height: 56px;
+  ul {
+    margin-right: 20px;
+    li {
+      display: inline-block;
+      line-height: 56px;
+      padding: 0 12px;
+      cursor: pointer;
+      &:hover,
+      &.active {
+        color: @primary-color;
+      }
+    }
+  }
+  .ant-calendar-picker {
+    margin-top: 11px;
+  }
+}
+
+.search {
+  width: 330px;
+  margin-bottom: 16px;
+  margin-top: -6px;
+}
+
+.edit-cont {
+  cursor: pointer;
+}
+.icon-edit {
+  color: @primary-color;
+}
+
+.exchange-static {
+  position: relative;
+}
+
+.set-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.select-content {
+  width: 540px;
+  .s-title {
+    padding: 4px 0 11px 15px;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: solid 1px rgba(0,0,0,.06);
+  }
+  .box {
+    padding: 10px 0 0 16px;
+    /deep/ .ant-checkbox-group {
+      .ant-checkbox-group-item {
+        width: 30%;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.edit-content {
+  .btn {
+    width:45px;
+    padding:0;
+    float: right;
+  }
+}
+
+.left-content {
+  /deep/ .ant-statistic-content {
+    font-size: 20px;
+    .ant-statistic-content-value-decimal {
+      font-size: 20px;
+    }
+  }
+}
+.tip {
+  margin-top: -14px;
+  margin-bottom: 8px;
+  line-height: 30px;
+  .anticon {
+    margin-right: 3px;
+  }
+}
+.table-page-search-wrapper {
+  .ant-form-inline {
+    /deep/ .ant-form-item {
+      &.label-left {
+        .ant-form-item-label {
+          left: -13px;
+        }
+      }
+      .ant-form-item-label {
+        width: 90px;
+      }
+    }
+  }
+}
+.exchange-tab {
+  height: 56px;
+  ul {
+    float: right;
+    li {
+      display: inline-block;
+      line-height: 56px;
+      padding: 0 12px;
+      cursor: pointer;
+      &:hover,
+      &.active {
+        color: @primary-color;
+      }
+    }
+  }
+}
+.pop-wraper{
+  max-width: 600px;
+  min-width: 500px;
+  padding: 16px;
+  padding-bottom: 6px;
+}
+.cutoff-number{
+  .input-group{
+    display: flex;
+    width: 100%;
+  }
+  .start-number{
+    flex: 1;
+    text-align: center
+  }
+  .end-number{
+    flex: 1;
+    text-align: center;
+    border-left: 0
+  }
+  .medium-icon{
+    width: 30px!important;
+    border-left: 0;
+    pointer-events: none;
+    background-color: #fff;
+    float:none;
+    display:inline-block;
+  }
+}
+
+.tip-icon-con {
+  position: absolute;
+  right: 24px;
+  top: 72px;
+}

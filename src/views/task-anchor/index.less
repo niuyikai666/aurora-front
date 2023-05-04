@@ -1,0 +1,38 @@
+.static-content {
+  display: flex;
+  .ant-statistic {
+    flex: 1;
+    margin-right: 18px;
+    border-right: solid 1px rgba(0,0,0, .06);
+    font-weight: 500;
+    color: #000;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  /deep/ .ant-statistic-title {
+    color: #000;
+  }
+}
+
+.card-custom {
+  /deep/ .ant-card-body {
+    padding: 8px 24px 24px 24px;
+  }
+  /deep/ .ant-card-head {
+    border-bottom: 0;
+  }
+  /deep/ .ant-card-head-title {
+    font-size: 18px;
+  }
+}
+
+.pop-wraper{
+  max-width: 600px;
+  min-width: 500px;
+  padding: 16px;
+  padding-bottom: 6px;
+}
+/deep/ .ant-checkbox-group {
+  width: 100%;
+}

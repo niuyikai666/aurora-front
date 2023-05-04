@@ -1,0 +1,56 @@
+<template>
+  <div class="tab-content">
+    <h1 :class="{'line': titleLine}">{{ title }} <span v-if="desc" class="desc">{{ desc }}</span></h1>
+    <slot></slot>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Info',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    desc: {
+      type: String,
+      default: ''
+    },
+    titleLine: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>
+
+<style lang="less" scoped>
+  @import '~ant-design-vue/es/style/themes/default.less';
+  .tab-content {
+    h1 {
+      position: relative;
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(0,0,0, .85);
+      margin-bottom: 15px;
+      &.line {
+        padding-left: 10px;
+        &::before {
+          display: table;
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 4px;
+          border-right: solid 2px @primary-color;
+          height: 14px;
+        }
+      }
+      .desc{
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.45);
+        font-size: 12px;
+      }
+    }
+  }
+</style>
